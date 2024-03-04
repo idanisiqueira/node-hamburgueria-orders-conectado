@@ -1,8 +1,10 @@
 const express = require('express') // importando o express para ser usado na aplicação
 const app = express()
+const cors = require('cors') // importando o cors para que a API back-end permita conectar o front-end React
 
 const uuid = require('uuid') // gerador de ids únicas na aplicação
 app.use(express.json())
+app.use(cors()); // habilitando as rotas para o front-end
 
 app.listen(3001) // escolhendo a porta para rodar a aplicação
 
